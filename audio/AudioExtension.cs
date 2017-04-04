@@ -38,84 +38,76 @@ public static class AudioExtension
 	}
 
 
-//	public static void addEventListenerAmBt(this GameObject _obj, string _audioPath){
-//		
-//		EventListenerAmBt eventListener;
-//		
-//		eventListener = _obj.AddComponent<EventListenerAmBt> ();
-//		eventListener.FillClipList (_audioPath);
-//
-//	}
-//	
-//	public static void addEventListenerLdSc(this GameObject _obj, string _audioPath){
-//		
-//		EventListenerLdSc eventListener;
-//		
-//		eventListener = _obj.AddComponent<EventListenerLdSc> ();
-//		eventListener.FillClipList (_audioPath);
-//
-//	}
-//	
-//	public static void addEventListenerSpCh(this GameObject _obj, string _audioPath){
-//		
-//		EventListenerSpCh eventListener;
-//		
-//		eventListener = _obj.AddComponent<EventListenerSpCh> ();
-//		eventListener.FillClipList (_audioPath);
-//
-//	}
-//
-//	public static void addEventListenerMnCh(this GameObject _obj, string _audioPath){
-//		
-//		EventListenerMnCh eventListener;
-//		
-//		eventListener = _obj.AddComponent<EventListenerMnCh> ();
-//		eventListener.FillClipList (_audioPath);
-//
-//	}
+	public static void addEventListenerAmBt(this GameObject _obj, string _audioPath){
+		
+		EventListenerAmBt eventListener;
+		
+		eventListener = _obj.AddComponent<EventListenerAmBt> ();
+		eventListener.FillClipList (_audioPath);
 
-	/// <summary>
-	/// Switch statement to call various audio setup functions on GOs based on their characterType
-	/// </summary>
-	/// <param name="_charType">_char type.</param>
-//	public static void DefCharacter (this GameObject _toCreate, CharacterType.CharacterTypeEnum _charType)
-//	{
-//		//CharacterType _charType;				// type of character
-//		//int a = (int)_charType; 		// type cast the _charType enum to an int variable
-//		//int nmbOfSources;
-//		string audioPath;
-//		
-//		switch (_charType)
-//		{			
-//		case CharacterType.CharacterTypeEnum.amBt: // ambience object 
-//			audioPath = "ambiance"; // audioPath to load ambience audioclips for the scene
-//			_toCreate.addEventListenerAmBt(audioPath);
-//			break;
-//		case CharacterType.CharacterTypeEnum.ldSc: // landscape object
-//			audioPath = "ldSc"; // audioPath to load
-//			_toCreate.addEventListenerLdSc(audioPath);
-//			break;
-//		case CharacterType.CharacterTypeEnum.mnCh: // main character
-//			// add function
-//			break;
-//		case CharacterType.CharacterTypeEnum.spCh: // supplemetary character
-//			audioPath = "supplChar";
-//			_toCreate.addEventListenerSpCh(audioPath);
-//			break;
-//		case CharacterType.CharacterTypeEnum.epSd: // episode object
-//			audioPath = "Episode";
-//			// add function
-//			break;
-//		}
-//	}
+	}
+	
+	public static void addEventListenerLdSc(this GameObject _obj, string _audioPath){
+		
+		EventListenerLdSc eventListener;
+		
+		eventListener = _obj.AddComponent<EventListenerLdSc> ();
+		eventListener.FillClipList (_audioPath);
 
+	}
+	
+	public static void addEventListenerSpCh(this GameObject _obj, string _audioPath){
+		
+		EventListenerSpCh eventListener;
+		
+		eventListener = _obj.AddComponent<EventListenerSpCh> ();
+		eventListener.FillClipList (_audioPath);
 
+	}
 
+	public static void addEventListenerMnCh(this GameObject _obj, string _audioPath){
+		
+		EventListenerMnCh eventListener;
+		
+		eventListener = _obj.AddComponent<EventListenerMnCh> ();
+		eventListener.FillClipList (_audioPath);
 
+	}
 
-}
-
-/* 
+	/ <summary>
+	/ Switch statement to call various audio setup functions on GOs based on their characterType
+	/ </summary>
+	/ <param name="_charType">_char type.</param>
+	public static void DefCharacter (this GameObject _toCreate, CharacterType.CharacterTypeEnum _charType)
+	{
+		//CharacterType _charType;				// type of character
+		//int a = (int)_charType; 		// type cast the _charType enum to an int variable
+		//int nmbOfSources;
+		string audioPath;
+		
+		switch (_charType)
+		{			
+		case CharacterType.CharacterTypeEnum.amBt: // ambience object 
+			audioPath = "ambiance"; // audioPath to load ambience audioclips for the scene
+			_toCreate.addEventListenerAmBt(audioPath);
+			break;
+		case CharacterType.CharacterTypeEnum.ldSc: // landscape object
+			audioPath = "ldSc"; // audioPath to load
+			_toCreate.addEventListenerLdSc(audioPath);
+			break;
+		case CharacterType.CharacterTypeEnum.mnCh: // main character
+			// add function
+			break;
+		case CharacterType.CharacterTypeEnum.spCh: // supplemetary character
+			audioPath = "supplChar";
+			_toCreate.addEventListenerSpCh(audioPath);
+			break;
+		case CharacterType.CharacterTypeEnum.epSd: // episode object
+			audioPath = "Episode";
+			// add function
+			break;
+		}
+	}
 
 	public static void addAudioSources (this GameObject gameO, int nmbOfSources, AudioMixer mx ) {
 
@@ -138,9 +130,7 @@ public static class AudioExtension
 	/// </summary>
 	/// <param name="_obj">_obj.</param>
 	/// <param name="_soundType">_sound type.</param>
-egyelőre nem használjuk */ 
 
-/*
 	public static void setupAudioManager(this GameObject _obj, int _soundType, string _audioPath, int nmbOfSources){
 
 		AudioManager audioManager;
@@ -160,7 +150,7 @@ egyelőre nem használjuk */
 		audioManagerExtended.setUpAudioSlots (_audioPath); 
 		audioManagerExtended.Play (2);
 
-		/* switch (_soundType)
+		switch (_soundType)
 		{
 			
 		case 0: // ambience object
@@ -192,16 +182,10 @@ egyelőre nem használjuk */
 			break;			
 		}
 
-
-
 	public static void blendBetween (this GameObject gameO) {
-		
-		
-		
+			
 	}
 
-	
-	
 	/// <summary>
 	/// Plays the clip and returns onComplete.
 	/// </summary>
@@ -224,7 +208,7 @@ egyelőre nem használjuk */
 		audioSource.clip = audioclip;
 		audioSource.Play ();
 	}
-	
+
 	public static AudioSource addClip( this GameObject Obj, AudioClip clipToAdd, float volume){
 		
 		AudioSource srcAdd = Obj.AddComponent<AudioSource> ();
@@ -233,7 +217,6 @@ egyelőre nem használjuk */
 		srcAdd.volume = volume;
 		return srcAdd;
 	}
-
-	*/ 
-
+	
+}
 

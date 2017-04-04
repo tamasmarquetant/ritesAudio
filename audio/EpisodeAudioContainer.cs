@@ -2,6 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 
+/// <summary>
+/// Load Resources.AudioClip into organized Lists based on string analysis of filenames
+/// </summary>
 public class EpisodeAudioClipContainer : Singleton<EpisodeAudioClipContainer>  {
 
 	[System.Serializable]

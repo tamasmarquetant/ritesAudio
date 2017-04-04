@@ -3,7 +3,7 @@ using System;
 using System.Collections;
 
 
-//https://github.com/RocketAlien/unity-starter/blob/master/Assets/Scripts/Util/BaseBehaviour.cs
+//credit goes to>> https://github.com/RocketAlien/unity-starter/blob/master/Assets/Scripts/Util/BaseBehaviour.cs
 //base behaviour that hides type unsafe methods
 public class BaseBehaviour : MonoBehaviour {
 

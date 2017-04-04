@@ -35,21 +35,14 @@ public class AudioManager : Singleton<AudioManager>
 	[System.Serializable]
 	public class ClipInfo
 	{
-		//ClipInfo used to maintain default audio source info
-//		public AudioSource source { get; set; }
-//		public float defaultVolume { get; set; }
-//		public float startedPlaying { get; set; }
 		public AudioSource source;
 		public float defaultVolume;
 		public float startedPlaying;
 		public AudioClip clip;
-//		public AudioClip clip { get; set; }
 		public GameObject realGObject;
-//		public GameObject realGObject { get; set;}
 
 	}
 
-	//EZT A CLASST MÉG NEM TUDJUK HASZNÁLNI !!!!
 	public class AudioMixExtension
 	{
 		
@@ -81,8 +74,7 @@ public class AudioManager : Singleton<AudioManager>
 	void Awake() 
 	{
 		//		Debug.Log("AudioManager Initializing");
-		
-		
+				
 		try {
 			transform.parent = GameObject.FindGameObjectWithTag("Player").transform;
 			transform.localPosition = new Vector3(0, 0, 0);
@@ -230,8 +222,7 @@ public class AudioManager : Singleton<AudioManager>
 	}
 	
 	private AudioSource m_activeVoiceOver;
-	
-	
+		
 	private void setSource(AudioSource source, AudioClip clip, float volume) {
 		//		source.rolloffMode = AudioRolloffMode.Logarithmic;
 		source.dopplerLevel = 0.13f;
@@ -313,6 +304,9 @@ public class AudioManager : Singleton<AudioManager>
 		return count;
 	}
 
+	/// <summary>
+	/// display status onScreen
+	/// </summary>
 //	void OnGUI ()
 //	{
 //		GUI.Label( new Rect(10, 10, 200, 20), ("m_activeAudio.Count " + m_activeAudio.Count.ToString()) ); 

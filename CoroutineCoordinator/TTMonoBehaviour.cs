@@ -4,7 +4,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 /// <summary>
-/// Extending MonoBehaviour to add some extra functionality
+/// Extending BaseBehaviour (extending MonoBehaviour) to add some extra functionality. 
+/// Merging ideas from::
 /// Exception handling & Return Values from: http://twistedoakstudios.com/blog/Post83_coroutines-more-than-you-want-to-know
 /// Locking Coroutines to avoid concurrency problems http://www.zingweb.com/blog/2013/02/05/unity-coroutine-wrapper by Tim Tregubov (2013)
 /// Solution to pause, unease and kill running coroutines at will https://youtu.be/VnbfEyL85kE by prime[31]

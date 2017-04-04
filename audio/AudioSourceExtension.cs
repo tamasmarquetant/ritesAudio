@@ -24,15 +24,13 @@ public static class AudioSourceExtensions
 			yield return null;
 
 	}
-	
-	
+		
 	public static void playRandomClip( this AudioSource audioSource, AudioClip[] clips )
 	{
 		int clipIndex = UnityEngine.Random.Range( 0, clips.Length );
 		audioSource.playClip( clips[clipIndex] );
 	}
-	
-	
+		
 	public static IEnumerator fadeOutWithFixedDuration( this AudioSource audioSource, AudioClip audioClip, float duration, Action onComplete )
 	{
 		audioSource.playClip( audioClip );
